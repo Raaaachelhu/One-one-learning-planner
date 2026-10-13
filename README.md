@@ -1,0 +1,47 @@
+# 一对一 · 全科学情规划工作台
+
+developer：Rachel Hu
+
+纯静态网站，可在GitHub Pages访问，也可下载HTML后断网使用。不需要API、服务器、安装依赖或账号登录。
+
+## GitHub发布
+
+1. 创建一个独立仓库，建议命名为 `one-to-one-learning-planner`。选择公开仓库通常便于启用GitHub Pages；如需使用私有仓库，请先确认账号计划支持相应Pages功能。
+2. 解压本发布包，将 `index.html`、`one-to-one-offline.html`、`.nojekyll`、`README.md` 上传到仓库根目录。不要只上传ZIP文件，也不要把所有文件包在额外的文件夹中。
+3. 打开仓库 `Settings → Pages`。
+4. 在 `Build and deployment` 选择 `Deploy from a branch`，选择 `main` 分支和 `/(root)`，点击 `Save`。
+5. 等待GitHub完成发布，使用Pages页面显示的实际网址。不要把仓库地址当作网站地址。
+6. 将实际网站网址发给一线同事。后续更新替换两个HTML文件即可，不会上传浏览器中的学生档案。
+
+## 离线使用
+
+下载 `one-to-one-offline.html`，用Chrome、Edge或Safari打开。也可直接打开本包的 `index.html`。无需联网或登录；官方政策原文链接需要联网打开。
+
+## 一线使用顺序
+
+新建学生档案 → 电话学情规划 → 填写年级、地区、已知分数/薄弱科目与预算 → 根据电话信息生成规划 → 复制沟通稿/生成4K家长规划海报。
+
+没有试卷也能先规划。口述资料、真实测评与已核对逐题信息分别保留，不虚构知识点掌握率。成绩未知不填0分，满分未知不默认100分；只有可比较的历史成绩才连接趋势。未来阶段路径不是成绩预测。
+
+## 数据与备份
+
+- 每位同事的数据保存在自己的浏览器内，不上传GitHub，不在同事间自动共享。
+- 定期点击“备份”，保管导出的JSON档案；在另一浏览器或另一网址中使用“恢复”导入。
+- 从旧在线网址切换到GitHub Pages，档案不会自动迁移，应先备份再恢复。
+- 试卷图片/PDF只在当前页面会话内查看；档案备份不包含原始资料。
+- GitHub Pages访问权限取决于仓库和账号配置，本网站没有另建团队账号或成员权限系统。
+
+## 功能
+
+全学段年级选择；全科学情画像；电话信息初步规划与沟通稿；点状图、雷达图、历史折线；按学习预算生成未来周计划；本地试卷查看与人工逐题诊断；CSV题目文本导入；34地区带年份政策参考；4K PNG海报和ZIP导出；家长报告打印PDF；本机档案备份恢复。
+
+右上角固定标注 `developer：Rachel Hu`。
+
+## 官方发布说明
+
+https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site
+https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
+
+## 验证范围
+
+类型检查、单文件脚本语法、无API依赖、统计与预算逻辑、Canvas海报实际生成和ZIP内容验证已通过。当前环境未完成浏览器点击和GitHub Pages上线验证。
