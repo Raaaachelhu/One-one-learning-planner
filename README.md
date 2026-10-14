@@ -44,7 +44,7 @@ https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a
 
 ## 验证范围
 
-类型检查、单文件脚本语法、无API依赖、统计与预算逻辑、Canvas海报实际生成和ZIP内容验证已通过。当前环境未完成浏览器点击和GitHub Pages上线验证。
+本次修复已复现原包的启动错误，并通过脚本语法与 DOM 环境中的页面运行检查：默认首页和全部9个导航页面渲染无异常。未完成真实浏览器视觉检查、海报下载或GitHub Pages线上验证。
 
 ## 新增：顾问专业知识手册（2026-10-13）
 
@@ -66,3 +66,10 @@ https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a
 
 ### 更新 GitHub Pages
 解压后将 index.html、one-to-one-offline.html、README.md 和 .nojekyll 上传到原仓库根目录，覆盖同名文件。无需安装依赖。请等待 GitHub Pages 重新发布。
+
+
+## 白屏修复（2026-10-14）
+
+原因：增强模块 RHBlock 错把 JSX runtime 当作 React 调用 createElement，导致默认首页渲染异常。已改用打包内已有的 React createElement 接口。
+
+更新方法：解压后将 index.html 和 one-to-one-offline.html 上传至原仓库根目录，选择替换同名文件并提交；待 Pages 部署完成，强制刷新页面（Mac：Command+Shift+R；Windows：Ctrl+F5）。保留原网址和浏览器即可沿用已有本机档案。
