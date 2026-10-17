@@ -39,3 +39,4 @@ const dashboardRender=render;render=function(){dashboardRender();const root=curr
 // Saving a consultation from the first-call screen should open its existing archive flow.
 const dashboardOpenLegacy=openLegacy;openLegacy=function(page){dashboardOpenLegacy(page);if(dashboardView==='phone'&&page==='profile')showDashboardView('profile');};
 showDashboardView('phone');
+

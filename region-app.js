@@ -25,3 +25,4 @@ regionElement('region-import').onchange=async e=>{try{const file=e.target.files[
 regionElement('region-template').onclick=()=>download('地区数据样本.json',JSON.stringify({version:1,records:REGION_RECORDS},null,2),'application/json');
 for(const event of ['input','change'])document.getElementById('intake-form').addEventListener(event,()=>{if(!states.length){regionElement('regional-section').hidden=true;regionRecord=null;regionContext=null;regionPosition=null;}});
 const baseStudent=toStudent;toStudent=function(){const s=baseStudent();if(regionContext)s.regionalContext={exam:regionContext.exam,referenceYear:regionContext.year,projectedExamYear:projectedYear(regionContext.c,regionContext.exam),recordTitle:regionRecord?.title||'资料待补充',recordSources:regionRecord?.sources||[],position:regionPosition};return s;};
+
